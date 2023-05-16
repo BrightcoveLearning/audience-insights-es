@@ -1,3 +1,11 @@
+
+.anchor{
+    display: block;
+    height: 115px; /*same height as header*/
+    margin-top: -115px; /*same height as header*/
+    visibility: hidden;
+  }
+
 /* Header styles */
 
 body>div.page-header.theme-bg-dark.py-5.text-center.position-relative>div.container>div.page-intro.single-col-max.mx-auto a {
@@ -103,11 +111,11 @@ li li.nav-item {
 /* index pages styles */
 
 .nav-link {
-    color: #4ea8d1;
+    color: #000000;
 }
 
 .nav-link:hover {
-    color: #5eccff
+    color: #626568;
 }
 
 summary {
@@ -136,6 +144,7 @@ li.breadcrumb-item {
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     font-family: 'Poppins', articulat-cf, sans-serif;
     box-sizing: border-box;
+    max-width: 1000px;
 }
 
 h1 {
@@ -144,11 +153,15 @@ h1 {
     font-size: calc(2.7rem + .6vw);
 }
 
-h2 {
+section.bcls-section h2 {
     margin-top: 5px;
     margin-bottom: 15px;
     font-size: calc(1.8rem + .6vw);
+    /* fix for anchors appearing behind fixed header */
+    padding-top: 4rem;
+    margin-top: -4rem;
 }
+
 
 h3 {
     margin-top: 15px;
@@ -168,7 +181,7 @@ a:hover {
 
 .span-icon {
     text-align: center;
-    color: #4EA9D1;
+    color: #000000;
 }
 
 .card-body {
@@ -425,9 +438,10 @@ div#main_content.container {
         }
 
 .bcls-section {
-    margin-top: 2.5em;
+    margin-top: 2em;
     padding-top: .5em;
     border-top: 1px #CCC solid;
+    margin-bottom: 3rem;
 }
 
 .bcls-section h5 {
@@ -449,6 +463,12 @@ summary {
 section.bcls-section {
     padding-top: 2rem;
 }
+
+/* fix for anchors appearing behind fixed header */
+section.bcls-section {
+    /* scroll-padding-top: 6rem !important; */
+}
+
 
 /* images */
 
